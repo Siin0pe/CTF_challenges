@@ -170,7 +170,7 @@ body {
 /* Stolen-site layout */
 body.broken {
   position: relative;
-  overflow: hidden;
+  overflow-y: auto; /* allow scroll on glitch pages */
 }
 
 body.broken::before {
