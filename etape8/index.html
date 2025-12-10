@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etape 8 - Mission Expert (Bonus)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/main.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="broken">
+  <div class="wrapper">
+    <header class="glow">
+      <div class="top-bar">
+        <img src="../assets/logo.png" alt="Logo Syndicat Rouge" class="logo" />
+        <div>
+          <h1>🚀 ÉTAPE 8 : MISSION EXPERT (BONUS)</h1>
+          <p class="tagline">Caches mémoire volatiles, consoles bavardes et superviseurs pressés</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="panel hero">
+        <p class="eyebrow">Canal express</p>
+        <p>Cette section est réservée aux agents les plus rapides. Si vous êtes bloqués, demandez un indice aux superviseurs.</p>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <p class="chip">BONUS A</p>
+          <p class="muted small">L'INSPECTEUR GADGET</p>
+        </div>
+        <p>Un drapeau n'est pas dans le code de Webstorm, mais caché directement dans la mémoire du navigateur.</p>
+        <p class="muted">Piste :</p>
+        <ol class="tasks">
+          <li>Sur la page web, faites un Clic-Droit n'importe où -> Inspecter.</li>
+          <li>Allez dans l'onglet Console. Voyez-vous un message suspect ?</li>
+          <li>Allez dans l'onglet Application (ou Stockage), puis regardez dans Local Storage.</li>
+        </ol>
+      </section>
+
+      <section class="panel data">
+        <div class="panel-head">
+          <p class="label">Tableau de bord express</p>
+          <p class="muted small">Data bullshit à décoder</p>
+        </div>
+        <div class="data-grid">
+          <div class="data-card">
+            <p class="card-label">Flux chiffré</p>
+            <p class="big-number">98.7%</p>
+            <p class="muted">Bruit de fond non exploitable</p>
+          </div>
+          <div class="data-card">
+            <p class="card-label">Pings fantômes</p>
+            <p class="big-number">37</p>
+            <p class="muted">Sessions abandonnées</p>
+          </div>
+          <div class="data-card">
+            <p class="card-label">Checksum</p>
+            <p class="big-number">0x8A3E</p>
+            <p class="muted">Hash instable</p>
+          </div>
+          <div class="data-card">
+            <p class="card-label">Tampon RAM</p>
+            <p class="big-number">4.2 Mo</p>
+            <p class="muted">Zone à surveiller</p>
+          </div>
+        </div>
+        <div class="log-feed">
+          <p class="log-line">[12:04:11] Injection heuristique : OK</p>
+          <p class="log-line">[12:04:22] Détection console : message anormal détecté</p>
+          <p class="log-line">[12:04:35] Local Storage : entrée volatile écrite</p>
+          <p class="log-line">[12:04:48] Trace : consultez l'onglet Application</p>
+        </div>
+      </section>
+
+      <section class="panel response">
+        <div class="panel-head">
+          <p class="label">📝 RÉPONSE BONUS A :</p>
+          <p class="muted small">Inscris le flag que tu as déniché</p>
+        </div>
+        <textarea aria-label="Réponse bonus A" placeholder="Colle ici le flag extrait de la mémoire locale."></textarea>
+      </section>
+
+      <section class="panel fin">
+        <p class="finish">🏁 FIN DE MISSION</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
