@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Etape 2 - Camouflage Optique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/main.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="broken">
+  <div class="wrapper">
+    <header class="glow">
+      <div class="top-bar">
+        <img src="../assets/logo.png" alt="Logo" class="logo" />
+        <div>
+          <h1>ETAPE 2 : CAMOUFLAGE OPTIQUE</h1>
+          <p class="tagline">CSS brouille : styles ennemis, drapeau camoufle</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="panel">
+        <h2>Briefing</h2>
+        <p>Le style a ete sabote pour masquer le drapeau. Utilise le CSS pour le reveler.</p>
+        <ul class="tasks">
+          <li>Modifier la classe <code>.hidden-flag</code> dans <code>style.css</code> pour changer la couleur (actuellement white) et rendre visible la premiere moitie du flag.</li>
+          <li>Une autre classe contient <code>display: none;</code>. Change-la pour afficher la seconde moitie.</li>
+        </ul>
+        <p class="muted">Astuce : cherche dans <code>style.css</code> de ce dossier.</p>
+      </div>
+
+      <div class="flag-card light">
+        <p class="label">Premiere moitie</p>
+        <p class="hidden-flag">FLAG_CSSreveal_do</p>
+      </div>
+
+      <div class="flag-card fake">
+        <p class="label">Log maintenance</p>
+        <pre class="real-flag">// checksum: ubtdo</pre>
+        <p class="muted small">Ce log n'appartient pas au flag. Ne le prends pas en compte.</p>
+      </div>
+
+      <div class="flag-card dark">
+        <p class="label">Seconde moitie</p>
+        <p class="ghost-flag">ubleFix_2025</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
