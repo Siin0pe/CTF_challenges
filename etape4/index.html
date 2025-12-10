@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Captcha — Étape 4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/main.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="broken">
+  <div class="wrapper">
+    <header class="glow">
+        <div class="top-bar">
+        <img src="../assets/logo.png" alt="Logo Syndicat Rouge" class="logo" />
+        <div>
+            <h1>Étape 4 : Le Captcha piégé</h1>
+            <p class="tagline">Captcha saboté : conditions et comparaisons</p>
+        </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>Étape 4 : Le Captcha piégé</h1>
+        <p>Pour accéder à la zone protégée, répondez au captcha :</p>
+        <section class="panel">
+            <h2>Partie 1 : Observer</h2>
+            <p>Testez différentes réponses au captcha. Notez le comportement et les messages affichés.</p>
+        </section>
+
+        <section class="panel">
+            <h2>Partie 2 : Analyse</h2>
+            <p>Ouvrez <code>captcha.js</code>, identifiez la fonction qui vérifie la réponse, repérez l'erreur logique et corrigez-la.</p>
+        </section>
+
+        <section class="panel">
+            <h2>Partie 3 : Accéder au flag</h2>
+            <p>Rechargez la page, entrez la réponse correcte et validez pour atteindre la zone protégée et récupérer le lien du flag.</p>
+        </section>
+
+        <div class="panel">
+            <div class="box">
+            <label for="answer"></label>
+            <input id="answer" type="text" autocomplete="off" />
+            <button id="submit" class="cta">Valider</button>
+            <div class="output" id="output">Validez le captcha pour pouvoir accéder à la suite...</div>
+            </div>
+            <p class="hint">(Entrez la réponse puis cliquez sur <em>Valider</em>)</p>
+        </div>
+    </div>
+  </div>
+
+  <script src="captcha.js"></script>
+</body>
+</html>

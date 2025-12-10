@@ -1,0 +1,237 @@
+:root {
+  --bg: #0c0506;
+  --paper: #16090c;
+  --text: #f7e9e9;
+  --muted: #c7acad;
+  --accent: #f43f5e;
+  --accent-2: #f97316;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 18% 14%, rgba(244, 63, 94, 0.12), transparent 25%),
+    radial-gradient(circle at 82% 0%, rgba(249, 115, 22, 0.12), transparent 30%),
+    var(--bg);
+  color: var(--text);
+  padding: 2rem 1.2rem 3rem;
+}
+
+body.broken {
+  position: relative;
+  overflow: hidden;
+}
+
+body.broken::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  mix-blend-mode: screen;
+  opacity: 0.24;
+  pointer-events: none;
+  animation: noise 0.2s steps(3) infinite;
+}
+
+.wrapper {
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.1rem;
+  transform: rotate(-0.6deg) translateY(-2px);
+}
+
+.glow {
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--paper);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+  display: grid;
+  gap: 0.6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-bar {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  filter: saturate(0.5) drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+  animation: flicker 2.4s infinite;
+}
+
+.glow h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 4vw, 2.7rem);
+  letter-spacing: -0.02em;
+  text-shadow: 1px 0 var(--accent-2), -1px 0 var(--accent);
+  animation: jitter 1.8s steps(2) infinite;
+}
+
+.tagline {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+}
+
+.content {
+  background: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.1rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  transform: skew(-1deg) translateX(-3px);
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.panel h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.panel p {
+  margin: 0.4rem 0;
+  color: var(--muted);
+}
+
+.safe {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem;
+  background: linear-gradient(120deg, rgba(244, 63, 94, 0.16), rgba(249, 115, 22, 0.08));
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.safe-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.label {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.small {
+  font-size: 0.92rem;
+}
+
+.safe-body {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  color: #16090c;
+  font-weight: 800;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.output {
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  color: var(--text);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+@keyframes jitter {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-2px, 1px);
+  }
+  100% {
+    transform: translate(2px, -1px);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 0.75;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes noise {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-10px, 5px);
+  }
+  40% {
+    transform: translate(8px, -3px);
+  }
+  60% {
+    transform: translate(-4px, 2px);
+  }
+  80% {
+    transform: translate(6px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
